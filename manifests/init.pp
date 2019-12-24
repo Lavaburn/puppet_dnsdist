@@ -29,6 +29,8 @@ class dnsdist (
   $version          = $dnsdist::params::version,
   $webserver        = $dnsdist::params::webserver,
   $webserver_pass   = $dnsdist::params::webserver_pass,
+  $api_enabled      = $dnsdist::params::api_enabled,
+  $api_pass         = $dnsdist::params::api_pass,
   $control_socket   = $dnsdist::params::control_socket,
   $listen_addresess = $dnsdist::params::listen_addresess,
   $cache_enabled    = $dnsdist::params::cache_enabled,

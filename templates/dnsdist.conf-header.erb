@@ -1,4 +1,8 @@
+<% if @api_enabled %>
+webserver("<%= @webserver %>", "<%= @webserver_pass %>", "<%= @api_pass %>")
+<%- else %> 
 webserver("<%= @webserver %>", "<%= @webserver_pass %>")
+<% end -%>
 controlSocket("<%= @control_socket %>")
 <% @listen_addresess.each do |listen_addres| 
   -%>addLocal("<%= listen_addres %>")
