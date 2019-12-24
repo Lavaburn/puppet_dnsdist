@@ -8,6 +8,7 @@ class dnsdist::params {
   $api_enabled      = false
   $api_pass         = 'geheim'
   $control_socket   = '127.0.0.1'
+  $console_key      = false
   $listen_addresess = '0.0.0.0'   # TODO: ARRAY
   $cache_enabled    = false
   $cache_size       = 10000

@@ -4,11 +4,14 @@ webserver("<%= @webserver %>", "<%= @webserver_pass %>", "<%= @api_pass %>")
 webserver("<%= @webserver %>", "<%= @webserver_pass %>")
 <% end -%>
 controlSocket("<%= @control_socket %>")
+<% if @console_key %>
+setKey("<%= @console_key %>")
+<% end -%>
 <% @listen_addresess.each do |listen_addres| 
   -%>addLocal("<%= listen_addres %>")
 <% end -%>
 <% if @cache_enabled %>
-pc = newPacketCache(<%= @cache_size %>, 86400, 0, 60, 60)
+pc = newPacketCache(<%= @cache_size %>, {maxTTL=86400, minTTL=0, temporaryFailureTTL=60, staleTTL=60, dontAge=false})
 getPool(""):setCache(pc)
 <% end -%>
 <% if @metrics_enabled %>

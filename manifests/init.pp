@@ -32,6 +32,7 @@ class dnsdist (
   $api_enabled      = $dnsdist::params::api_enabled,
   $api_pass         = $dnsdist::params::api_pass,
   $control_socket   = $dnsdist::params::control_socket,
+  $console_key      = $dnsdist::params::console_key,
   $listen_addresess = $dnsdist::params::listen_addresess,
   $cache_enabled    = $dnsdist::params::cache_enabled,
   $cache_size       = $dnsdist::params::cache_size,
